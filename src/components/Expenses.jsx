@@ -1,3 +1,4 @@
+import Card from './Card';
 import ExpenseItem from './ExpenseItem';
 
 import './Expenses.css';
@@ -14,12 +15,11 @@ const Expenses = (props) => {
           />
         ));
       };
-    
+
     return (
-        <div className="expenses">
-            <h1>Expenses</h1>
+        <Card className="expenses">
             {renderExpenseItem(props.expensesArr)}
-        </div>
+        </Card>
     )
 }
 
