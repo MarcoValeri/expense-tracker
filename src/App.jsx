@@ -1,4 +1,5 @@
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 import './App.css'
 
@@ -26,9 +27,15 @@ function App() {
         },
     ];
 
+    // Event
+    const addExpenseHandler = expense => {
+        console.log(`In App.js`);
+        console.log(expense);
+    }
+
   return (
     <>
-    <h1>Expense Tracker</h1>
+    <NewExpense onAddExpense={addExpenseHandler} />
     <Expenses expensesArr={expenses} />
     </>
   )
